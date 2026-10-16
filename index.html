@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>التوابع (النعت) — قواعد اللغة العربية للصف الحادي عشر</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3ebdd;--paper:#fbf6ec;--ink:#3b2f24;--soft:#7a6a58;--latte:#c9a97e;--sage:#6f8467;--sky:#7d9bad;--line:#e1d3bb;--shadow:rgba(80,58,30,.18);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0;color:var(--ink);font-family:'Noto Naskh Arabic',serif;line-height:2;
+  background-color:#f3ebdd;
+  background-image:
+    radial-gradient(circle at 15% 0,rgba(201,169,126,.30),transparent 42%),
+    radial-gradient(circle at 90% 100%,rgba(125,155,173,.22),transparent 42%),
+    radial-gradient(circle at 50% 45%,rgba(255,255,255,.35),transparent 65%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'><g fill='none' stroke='%23c9a97e' stroke-width='0.55' opacity='0.28'><path d='M36 4 L46 14 L60 14 L60 28 L70 36 L60 44 L60 58 L46 58 L36 68 L26 58 L12 58 L12 44 L2 36 L12 28 L12 14 L26 14 Z'/><circle cx='36' cy='36' r='11'/><circle cx='36' cy='36' r='4'/><path d='M36 25 L47 36 L36 47 L25 36 Z'/></g></svg>");
+  background-attachment:fixed,fixed,fixed,fixed;
+  background-size:auto,auto,auto,72px 72px;
+}
+header{text-align:center;padding:28px 16px 8px}
+.stage{perspective:700px;height:120px;display:flex;justify-content:center;align-items:center}
+.cube{width:70px;height:70px;position:relative;transform-style:preserve-3d;animation:spin 14s linear infinite}
+.cube div{position:absolute;inset:0;border:1.5px solid var(--latte);background:rgba(201,169,126,.18);display:grid;place-items:center;font:700 30px Amiri;color:var(--ink)}
+.cube div:nth-child(1){transform:translateZ(35px)}.cube div:nth-child(2){transform:rotateY(180deg) translateZ(35px)}.cube div:nth-child(3){transform:rotateY(90deg) translateZ(35px)}.cube div:nth-child(4){transform:rotateY(-90deg) translateZ(35px)}.cube div:nth-child(5){transform:rotateX(90deg) translateZ(35px)}.cube div:nth-child(6){transform:rotateX(-90deg) translateZ(35px)}
+@keyframes spin{to{transform:rotateX(360deg) rotateY(360deg)}}
+@media (prefers-reduced-motion:reduce){.cube{animation:none;transform:rotateX(-20deg) rotateY(30deg)}.page{transition:none!important}}
+h1{font:700 clamp(30px,6vw,48px) Amiri;margin:6px 0 0}
+.sub{color:var(--soft);font-size:15px;margin:0}
+.sub.author{color:var(--ink);font-weight:700;font-size:16px;margin-top:4px}
+.sub.author.supervisor{color:var(--sage)}
+nav{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:14px 10px;max-width:820px;margin:auto}
+nav button,.tabs button,.tools button{font:600 15px 'Noto Naskh Arabic';border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;min-width:40px;padding:2px 10px;cursor:pointer}
+nav button[aria-current=true],.tabs button[aria-current=true]{background:var(--latte);color:#2b2118;border-color:var(--latte)}
+button:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+main{max-width:860px;margin:auto;padding:0 14px 50px}
+.tabs{display:flex;gap:8px;justify-content:center;margin:6px 0 16px}.tabs button{padding:4px 16px}
+.tools{display:flex;gap:8px;justify-content:center;margin-bottom:10px}
+.book{perspective:1400px}
+.page{background:var(--paper);border:1px solid var(--line);border-radius:6px 18px 18px 6px;box-shadow:0 14px 30px var(--shadow),inset -8px 0 14px rgba(201,169,126,.2);padding:22px clamp(16px,4vw,38px);transform-origin:right center;animation:flip .6s ease;margin-bottom:22px}
+@keyframes flip{from{transform:rotateY(-35deg);opacity:.2}}
+.page h2{font:700 24px Amiri;margin:0 0 4px;color:var(--sage)}
+.pn{color:var(--soft);font-size:13px;margin-bottom:8px}
+.ayah{font:700 clamp(22px,4.4vw,31px)/2.1 Amiri;text-align:center;background:linear-gradient(var(--bg),var(--paper));border:1.5px solid var(--latte);outline:1px solid var(--line);outline-offset:4px;border-radius:12px;padding:14px 16px;margin:12px 4px 18px}
+.title-box{font:700 clamp(20px,3.8vw,26px)/2.1 Amiri;text-align:center;background:linear-gradient(var(--bg),var(--paper));border:1.5px solid var(--latte);outline:1px solid var(--line);outline-offset:4px;border-radius:12px;padding:14px 16px;margin:12px 4px 18px;color:var(--sage)}
+h3{font:700 19px Amiri;color:var(--latte);margin:18px 0 4px;border-right:4px solid var(--latte);padding-right:10px}
+p{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:16px}
+th,td{border:1px solid var(--line);padding:4px 10px;text-align:right}
+th{background:rgba(201,169,126,.28);font-family:Amiri}
+td:first-child{font:700 18px Amiri;white-space:nowrap}
+.q{background:rgba(125,155,173,.16);border-radius:12px;padding:10px 14px}
+.ans{display:none;background:rgba(111,132,103,.15);border-radius:12px;padding:10px 14px;margin-top:8px}
+.ans.on{display:block}
+.q button{font:600 14px 'Noto Naskh Arabic';margin-top:4px;background:var(--sage);color:#fff;border:0;border-radius:8px;padding:2px 14px;cursor:pointer}
+.note{font-size:13px;color:var(--soft);border-top:1px solid var(--line);margin-top:12px;padding-top:6px}
+
+#explain-footer {
+    display: none;
+    background: var(--paper);
+    border: 2px dashed var(--latte);
+    border-radius: 14px;
+    padding: 14px;
+    margin: 20px auto;
+    max-width: 860px;
+    text-align: center;
+    box-shadow: 0 10px 25px var(--shadow);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--sage);
+}
+#explain-footer.active {
+    display: block;
+}
+
+footer{text-align:center;color:var(--soft);font-size:13px;padding:0 14px 30px}
+</style>
+</head>
+<body>
+<header>
+<div class="stage" aria-hidden="true"><div class="cube"><div>ن</div><div>ع</div><div>ت</div><div>ت</div><div>ف</div><div>ص</div></div></div>
+<h1>التوابع (النعت)</h1>
+<p class="sub">قواعد اللغة العربية — الصف الحادي عشر العلمي (رزمة ٢٠٢٤)</p>
+<p class="sub author">إعداد الطالب: انس نهاد محمود الجعل · حادي عشر علمي 1</p>
+<p class="sub author supervisor">إشراف المعلمة الفاضلة أ. حُسُن شلش</p>
+</header>
+<nav id="nav" aria-label="أقسام الدرس"></nav>
+<main>
+<div class="tools">
+    <div class="seg">
+        <button id="m1">مقسّم</button>
+        <button id="all">كل الصفحات</button>
+        <button id="bkb" title="عرض الصفحات كأنها كتاب مع قلب الصفحات">وضع الكتاب</button>
+    </div>
+    <button id="drill" class="tg">وضع التدريب</button>
+</div>
+
+<div class="prog"><i id="pbar"></i></div>
+<div class="tabs" id="tabs"></div>
+<div class="book" id="book"></div>
+
+<div id="explain-footer">
+    إعداد الطالب: انس نهاد محمود الجعل · حادي عشر علمي 1 | بإشراف المعلمة الفاضلة أ. حُسُن شلش
+</div>
+
+</main>
+<script>
+const V=[
+["التوابع أربعة: النعت، والعطف، والتوكيد، والبدل",
+"التوابع هي ألفاظ تتبع ما قبلها (المتبوع) في الإعراب رفعاً ونصباً وجراً. وأول التوابع هو النعت (الصفة)، وهو تابع يوضح متبوعه (المنعوت) إن كان معرفة، ويخصصه إن كان نكرة.<br><b>المعنى النحوي:</b> المنعوت يُعرب بحسب موقعه في الجملة، والنعت يتبعه في الحركات والوظيفة النحوية.",
+[["النعت","الصفة التي تتبع المنعوت","جمعها: نعوت"],["التوابع","ألفاظ تتبع ما قبلها في الإعراب","مفردها: تابع"],["المنعوت","الموصوف الذي يسبق النعت","جمعها: منعوتون / منعوتات"]],
+"أعرب: ﴿وَفِي الْأَرْضِ قِطَعٌ مُتَجَاوِرَاتٌ﴾",
+"قطع: مبتدأ مؤخر مرفوع وعلامة رفعه الضمة الظاهرة. متجاورات: نعت (صفة) مرفوع وعلامة رفعه الضمة الظاهرة."],
+["النعت المفرد: ما ليس جملة ولا شبه جملة",
+"النعت المفرد هو ما كان كلمة واحدة تفيد الصفة، ولا تعني نقيض المثنى أو الجمع؛ بل يأتي مفردًا أو مثنى أو جمعاً مطابِقاً لمنعوته.<br><b>أمثلة الرزمة:</b> ﴿جَنَّاتٍ لَّهُمْ فِيهَا نَعِيمٌ مُّقِيمٌ﴾ (مقيم: نعت مفرد مرفوع)، ﴿السَّحَابَ الرِّقَالَ﴾ (الرقال: نعت مفرد منصوب)، ﴿خَلْقٍ جَدِيدٍ﴾ (جديد: نعت مفرد مجرور).",
+[["مفرد","ما ليس جملة ولا شبه جملة","مفرد × جملة"],["الرقال","السحاب العظيم الثقيل","جمع ثقيلة"],["مقيم","دائم ثابت","مقيم × زائل"]],
+"أعرب: ﴿لَفِي خَلْقٍ جَدِيدٍ﴾",
+"في: حرف جر. خلق: اسم مجرور وعلامة جره الكسرة. جديد: نعت مجرور وعلامة جره الكسرة الظاهرة."],
+["النعت الجملة وشبه الجملة (الجمل بعد النكرات صفات)",
+"يجيء النعت جملة فعلية أو جملة اسمية أو شبه جملة (ظرف أو جار ومجرور). والشرط الأساسي لنعت الجملة أن يكون المنعوت <b>نكرة</b>، وأن تشتمل الجملة على ضمير رابط يعود على المنعوت.<br><b>قاعدة ذهبية:</b> الجمل بعد النكرات صفات، وبعد المعارف أحوال.",
+[["الجملة الفعلية","ما تكونت من فعل وفاعل في محل نعت","—"],["الجملة الاسمية","ما تكونت من مبتدأ وخبر تشتمل على ضمير","—"],["شبه الجملة","الجار والمجرور أو الظرف","—"]],
+"أعرب جملة النعت في: ﴿لِّقَوْمٍ يَتَفَكَّرُونَ﴾",
+"يتفكرون: فعل مضارع مرفوع بثبوت النون، والواو ضمير متصل في محل رفع فاعل. والجملة الفعلية (يتفكرون) في محل جر نعت لـ (قوم)."],
+["النعت السببي: يصف شيئاً من لوازم المنعوت",
+"النعت السببي يتبع ما قبله في الإعراب والتحديد (التعريف والتنكير)، ويتبع ما بعده في التذكير والتأنيث، ويكون دائماً مفرداً.<br><b>مثال الرزمة:</b> «لَنا عَدُوٌّ شَدِيدٌ مَكْرُهُ»؛ كلمة (شديد) تصف مكر العدو لا ذات العدو نفسها، ولذا يُسمى نعتاً سببياً.",
+[["النعت السببي","يصف شيئاً متعلقاً بالمنعوت","—"],["مكره","مكر: فاعل لاسم الفاعل أو الصفة المشبهة","—"]],
+"أعرب: ﴿لَنَا عَدُوٌّ شَدِيدٌ مَكْرُهُ﴾",
+"عدو: مبتدأ مؤخر مرفوع وعلامة رفعه الضمة. شديد: نعت سببي مرفوع وعلامة رفعه الضمة. مكره: فاعل لشديد مرفوع وهو مضاف والهاء مضاف إليه."],
+["حل التدريب الأول: تحديد النعت والمنعوت في الآيات الكريمة",
+"1. ﴿وَقَالَ رَجُلٌ مُّؤْمِنٌ... يَكْتُمُ إِيمَانَهُ﴾ ➔ المنعوت (رجل)، النعت المفرد (مؤمن)، والنعت الجملة (يكتم إيمانه).<br>2. ﴿رِجَالٌ صَدَقُوا﴾ ➔ المنعوت (رجال)، النعت جملة فعلية (صدقوا).<br>3. ﴿رَجُلٌ يَسْعَى﴾ ➔ المنعوت (رجل)، النعت جملة فعلية (يسعى).<br>4. ﴿وَجَنَّةٍ عَرْضُهَا السَّمَاوَاتُ﴾ ➔ المنعوت (جنة)، النعت جملة اسمية (عرضها السماوات).<br>5. ﴿وَكُلُّ شَيْءٍ عِندَهُ بِمِقْدَارٍ﴾ ➔ المنعوت (شيء)، النعت شبه جملة (عنده).",
+[["صدقوا","جملة فعلية في محل رفع نعت","—"],["عرضها السماوات","جملة اسمية في محل جر نعت","—"]],
+"أعرب: ﴿رَجُلٌ يَسْعَى﴾",
+"رجل: فاعل مرفوع وعلامة رفعه الضمة. يسعى: فعل مضارع مرفوع بالضمة المقدرة، والجملة الفعلية (يسعى) في محل رفع نعت لـ (رجل)."],
+["حل التدريب الثاني والثالث: المطابقة والتمثيل بالجمل",
+"<b>التدريب الثاني (المطابقة):</b><br>1. يُحشر التاجران <b>الصادقان</b> مع الأنبياء.<br>2. يُحشر التجار <b>الصادقون</b> مع الأنبياء.<br>3. تُحشر التاجرة <b>الصادقة</b> مع الأنبياء.<br>4. تُحشر التاجرتان <b>الصادقتان</b> مع الأنبياء.<br>5. تُحشر التاجرات <b>الصادقات</b> مع الأنبياء.<br><b>التدريب الثالث (التمثيل):</b><br>• نعت جملة فعلية: رأيت طالباً <b>يجتهد في دروسه</b>.<br>• نعت جملة اسمية: زرت حديقة <b>أزهارها جميلة</b>.<br>• نعت شبه جملة: شاهدت عصفوراً <b>على الغصن</b>.<br>• نعت مفرد: قرأت كتاباً <b>نافعاً</b>.",
+[["الصادقان","نعت مرفوع بالياء لأنه مثنى","—"],["أزهارها جميلة","مبتدأ وخبر في محل نصب نعت","—"]],
+"أعرب: «رَأَيْتُ طَالِباً يَجْتَهِدُ»",
+"طالباً: مفعول به منصوب وعلامة نصبه الفتحة. يجتهد: فعل مضارع والفاعل مستتر، والجملة الفعلية في محل نصب نعت."],
+["حل التدريب الرابع: الفروق الإعرابية بين الجمل المتقابلة",
+"1. <b>الطالبُ النشيطُ محبوبٌ</b> ➔ (النشيطُ): نعت مرفوع وعلامة رفعه الضمة.<br><b>الطالبُ نشيطٌ</b> ➔ (نشيطٌ): خبر المبتدأ مرفوع وعلامة رفعه الضمة.<br><i>التعليل:</i> في الأولى الكلمة معرفة كمنعوتها فتكون نعتاً، وفي الثانية تمّ بها المعنى مع المبتدأ المعرفة فتكون خبراً.<br>2. <b>جاءَ رجلٌ يسألُ عن عطاءٍ</b> ➔ جملة (يسألُ) في محل رفع نعت لـ (رجل) لأن المنعوت نكرة.<br><b>جاءَ الرجلُ يسألُ عن عطاءٍ</b> ➔ جملة (يسألُ) في محل نصب حال من (الرجل) لأن المنعوت معرفة.",
+[["النشيط","نعت معرفة يتبع المعرفة","—"],["يسأل (بعد نكرة)","جملة في محل رفع نعت","—"],["يسأل (بعد معرفة)","جملة في محل نصب حال","—"]],
+"أعرب جملة (يسأل) في: «جَاءَ الرَّجُلُ يَسْأَلُ»",
+"يسأل: فعل مضارع والفاعل ضمير مستتر تقديره هو، والجملة الفعلية في محل نصب حال من (الرجل)."],
+["حل ورقة العمل الشاملة في درس النعت والنعت السببي",
+"<b>س1: إعراب ما تحته خط:</b><br>• هذا رجلٌ ابنه محبوبٌ ➔ (ابنه محبوب): جملة اسمية في محل رفع نعت لـ (رجل).<br>• هذا رجلٌ محبوبٌ ابنه ➔ (محبوب): نعت سببي مرفوع، (ابنه): فاعل لاسم المفعول/الصفة المشبهة مرفوع.<br><b>س2: موقع الجملة الاسمية:</b><br>• هذا عالمٌ علمه غزيرٌ ➔ جملة (علمه غزير) في محل رفع نعت.<br>• هذا العالمُ علمه غزيرٌ ➔ جملة (علمه غزير) في محل رفع خبر المبتدأ (هذا) أو خبر ثانٍ.<br><b>س4: تصويب الأخطاء النحوية:</b><br>• في السوق بضاعةٌ جميلةً ➔ التصحيح: <b>جميلةٌ</b> (نعت مرفوع لمبتدأ مؤخر).<br>• كتبتُ بقلمٍ أزرقاً ➔ التصحيح: <b>أزرقَ</b> (نعت مجرور بالفتحة لأنه ممنوع من الصرف).",
+[["علمه غزير","مبتدأ وخبر تشتمل على ضمير رابط","—"],["أزرق","صفة على وزن أفعل ممنوعة من الصرف","تجر بالفتحة"]],
+"أعرب: «هَذَا رَجُلٌ مَحْبُوبٌ ابْنُهُ»",
+"هذا: اسم إشارة مبتدأ. رجل: خبر مرفوع بالضمة. محبوب: نعت سببي مرفوع بالضمة. ابنه: نائب فاعل لاسم المفعول (محبوب) مرفوع بالضمة."]
+];
+
+const $=s=>document.querySelector(s);let cur=0,pg=0,all=false;
+const ar=n=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+const T=["١ التفسير والشرح","٢ المفردات والمعاني","٣ الإعراب والتحليل"];
+
+function ayah(i){
+    const text = V[i][0];
+    if (text.includes("﴿")) {
+        return `<div class="ayah">${text} <small>(${ar(i+1)})</small></div>`;
+    }
+    return `<div class="title-box">${text} <small>(${ar(i+1)})</small></div>`;
+}
+
+function head(i,p,t){return `<h2>${t}</h2><div class="pn">الدرس الأساسي — الصفحة ${ar(p+1)} من ٣</div>`+ayah(i)}
+
+function page(i,p){const v=V[i];let h=`<section class="page">`+head(i,p,["الشرح النحوي والتطبيقي","المفردات والمفاهيم","الإعراب والتطبيق الأكاديمي"][p]);
+if(p==0){h+=`<h3>التوضيح والشرح المفصل</h3><p>${v[1]}</p><h3>القواعد والفوائد التربوية</h3><p>النعت تابع يكمل متبوعه، والمحافظة على سلامة التركيب النحوي يمنح اللسان والبيان قوة وفصاحة.</p>`}
+if(p==1){h+=`<h3>المفردات والمصطلحات النحوية</h3><table><tr><th>المصطلح / الكلمة</th><th>الشرح النحوي والتفصيلي</th><th>الجمع / المضاد / التوضيح</th></tr>${v[2].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('')}</table>`}
+if(p==2){h+=`<h3>السؤال الإعرابي للتطبيق</h3><div class="q"><b>${v[3]}</b><br><button data-a>أظهر الإجابة النموذجية</button><div class="ans"><b>الإجابة والإعراب:</b> ${v[4]}</div></div>`}
+return h+`</section>`}
+
+function render(){
+document.querySelectorAll('#nav button').forEach((b,i)=>b.setAttribute('aria-current',i==cur));
+$('#tabs').style.display=all?'none':'flex';
+document.querySelectorAll('#tabs button').forEach((b,i)=>b.setAttribute('aria-current',i==pg));
+$('#book').innerHTML=all?V.map((_,i)=>[0,1,2].map(p=>page(i,p)).join('')).join(''):page(cur,pg);
+bind()}
+
+function bind(){
+document.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{const a=b.nextElementSibling;a.classList.toggle('on');b.textContent=a.classList.contains('on')?'أخفِ الإجابة':'أظهر الإجابة'});
+}
+
+V.forEach((_,i)=>{const b=document.createElement('button');b.textContent=ar(i+1);b.title='بند '+ar(i+1);b.onclick=()=>{cur=i;pg=0;all=false;render();scrollTo({top:0})};$('#nav').appendChild(b)});
+T.forEach((t,i)=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>{pg=i;render()};$('#tabs').appendChild(b)});
+$('#all').onclick=()=>{all=!all;render();if(all)setTimeout(()=>print(),300)};
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const docEl = document.documentElement;
+        const explainFooter = $('#explain-footer');
+        
+        if (!document.fullscreenElement) {
+            if (docEl.requestFullscreen) docEl.requestFullscreen();
+            else if (docEl.webkitRequestFullscreen) docEl.webkitRequestFullscreen();
+            explainFooter.classList.add('active');
+        } else {
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            explainFooter.classList.remove('active');
+        }
+    }
+});
+
+document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+        $('#explain-footer').classList.remove('active');
+    }
+});
+
+render();
+</script>
+<style>
+.tools{align-items:center;flex-wrap:wrap}.seg{display:flex;border:1px solid var(--latte);border-radius:12px;overflow:hidden}.seg button{border:0;border-radius:0;padding:4px 14px}.seg button[aria-pressed=true]{background:var(--latte);color:#2b2118}
+.tools .tg[aria-pressed=true]{background:var(--sage);color:#fff}
+.prog{max-width:360px;height:6px;border-radius:6px;background:var(--line);margin:0 auto 14px;overflow:hidden}.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--latte),var(--sage));transition:width .5s}
+nav button.seen:not([aria-current=true]){border-color:var(--sage);color:var(--sage)}
+.sec{display:grid;gap:8px}details{border:1px solid var(--line);border-radius:12px;background:rgba(201,169,126,.1);padding:4px 14px}summary{cursor:pointer;font:700 17px Amiri;color:var(--sage);padding:2px 0}details[open]{background:rgba(111,132,103,.12)}details p{margin:2px 0 8px;font-size:16px}
+.sent{font:700 clamp(20px,4vw,27px)/2 Amiri;text-align:center;background:rgba(125,155,173,.15);border-radius:12px;padding:10px;margin:6px 0 12px}
+.drill td+td,.drill .rv{filter:blur(7px);cursor:pointer;transition:filter .3s}.drill td+td.on,.drill .rv.on{filter:none}
+tr.hl:hover td{background:rgba(201,169,126,.2)}td.w{font:700 18px Amiri;color:var(--sage);white-space:nowrap}
+</style>
+<script>
+const P=s=>s.split('|').map(x=>x.split('~'));
+const E=[
+["النعت المفرد~ما ليس جملة ولا شبه جملة|النعت الجملة~ما كان جملة اسمية أو فعلية بشرط نكرة المنعوت|النعت السببي~يصف شيئاً يتعلق بالمنعوت ويتبعه إعراباً","مفرد~جملة|معرفة~نكرة","تابع~توابع|منعوت~منعوتات","قاعدة~الجمل بعد النكرات صفات وبعد المعارف أحوال|تنبيه~النعت يتبع المنعوت في الإعراب رفعاً ونصباً وجراً","وَفِي الْأَرْضِ قِطَعٌ مُتَجَاوِرَاتٌ|في الأرض~جار ومجرور خبر مقدم|قطع~مبتدأ مؤخر مرفوع بالضمة|متجاورات~نعت مفرد مرفوع بالضمة"],
+["نعت مفرد~كلمة واحدة تطابق المنعوت|الرقال~السحاب الثقيل|خلق جديد~إعادة البعث","مقيم~زائل|جديد~قديم","سحاب~سحائب|جنة~جنات","مطابقة~النعت المفرد يطابق المنعوت في الإعراب والتذكير والتأنيث والعدد","لَفِي خَلْقٍ جَدِيدٍ|في~حرف جر|خلق~اسم مجرور بالكسرة|جديد~نعت مجرور بالكسرة الظاهرة"],
+["نعت جملة فعلية~فعل وفاعل بعد اسم نكرة|نعت جملة اسمية~مبتدأ وخبر تشتمل على ضمير يعود على النكرة|نعت شبه جملة~ظرف أو جار ومجرور بعد نكرة","نكرة~معرفة|رفع~نصب وجر","جملة~جمل|نعت~نعوت","شرط أساسي~اشتراط الضمير الرابط في جملة النعت ليفرّق بين الصفة والحال","لِّقَوْمٍ يَتَفَكَّرُونَ|لقوم~جار ومجرور|يتفكرون~فعل مضارع والواو فاعل|جملة يتفكرون~في محل جر نعت لـ قوم"],
+["نعت سببي~يتبع ما قبله إعراباً وما بعده تذكيراً وتأنيثاً|مكره~فاعل للنعت السببي مرفوع بالضمة","سببي~حقيقي|شديد~ضعيف","عدو~أعداء|مكر~امكار","خاصية~النعت السببي يلزم الإفراد دائماً","لَنَا عَدُوٌّ شَدِيدٌ مَكْرُهُ|عدو~مبتدأ مؤخر مرفوع بالضمة|شديد~نعت سببي مرفوع بالضمة|مكره~فاعل لشديد مرفوع وهو مضاف والهاء مضاف إليه"],
+["رجل مؤمن~مؤمن نعت مفرد لـ رجل|صدقوا~جملة فعلية نعت لـ رجال|عرضها السماوات~جملة اسمية نعت لـ جنة","مؤمن~كافر|صدقوا~كذبوا","رجل~رجال|أمر~أوامر","تعدد النعت~يجوز أن يتعدد النعت لمنعوت واحد مفرد ثم جملة","وَقَالَ رَجُلٌ مُؤْمِنٌ يَكْتُمُ إِيمَانَهُ|رجل~فاعل مرفوع بالضمة|مؤمن~نعت مفرد مرفوع بالضمة|جملة يكتم إيمانه~في محل رفع نعت ثانٍ لـ رجل"],
+["الصادقان~نعت مثنى مرفوع بالياء|الصادقون~نعت جمع مذكر مرفوع بالواو|الصادقات~نعت جمع مؤنث مرفوع بالضمة","الصادق~الكاذب|المجتهد~المكسال","تاجر~تجار|طالب~طلاب","قاعدة المطابقة~يطابق النعت المفرد منعوته في 4 من 10 (الإعراب، التعريف/التنكير، التذكير/التأنيث، العدد)","يُحْشَرُ التَّاجِرَانِ الصَّادِقَانِ|التاجران~نائب فاعل مرفوع بالالف لأنه مثنى|الصادقان~نعت مرفوع بالالف لأنه مثنى"],
+["الطالب النشيط محبوب~النشيط نعت مرفوع|الطالب نشيط~نشيط خبر مرفوع تم به المعنى|جاء رجل يسأل~يسأل جملة نعت","معرفة~نكرة|خبر~صفة","نشيط~نشطاء|رجل~رجال","الفرق الجوهري~الفرق بين النعت والحال يتوقف على تعريف المنعوت أو تنكيره","جَاءَ الرَّجُلُ يَسْأَلُ|الرجل~فاعل مرفوع بالضمة|جملة يسأل~في محل نصب حال من الرجل المعرفة"],
+["ابنه محبوب~جملة اسمية في محل رفع نعت|محبوب ابنه~محبوب نعت سببي وابنه فاعل|علمه غزير~جملة نعت أو خبر","جميلةٌ~تصحيح رفع بضاعةٌ جميلةٌ|أزرقَ~تصحيح جر بالفتحة لأنه ممنوع من الصرف","عالم~علماء|بضاعة~بضائع","تنبيه إعرابي~تنوين التمكين يلحق الأسماء المعربة والممنوع من الصرف يجر بالفتحة","هَذَا رَجُلٌ مَحْبُوبٌ ابْنُهُ|هذا~اسم إشارة مبتدأ|رجل~خبر مرفوع|محبوب~نعت سببي مرفوع بالضمة|ابنه~نائب فاعل أو فاعل مرفوع بالضمة"]
+];
+
+const TT=['التفسير والشرح النحوي','المفردات والقواعد','الإعراب والتمارين'];
+const seen=new Set();
+function tbl(h1,h2,rows){return `<table><tr><th>${h1}</th><th>${h2}</th></tr>${rows.map(r=>`<tr class="hl"><td class="w">${r[0]}</td><td>${r[1]||''}</td></tr>`).join('')}</table>`}
+
+function page(i,p){const v=V[i],e=E[i];let h=`<section class="page">`+head(i,p,TT[p]);
+if(p==0){h+=`<h3>التوضيح الشامل</h3><p>${v[1]}</p><h3>الفوائد التربوية والنحوية</h3><p>النعت تابع أساسي يعزز المعنى ويخصصه، وضبطه يمنح الطالب ملكة التعبير والنطق الصحيح.</p><h3>القواعد والدلالات الجمالية</h3><div class="sec">${P(e[3]).map(b=>`<details><summary>${b[0]}</summary><p>${b[1]}</p></details>`).join('')}</div>`}
+if(p==1){h+=`<h3>١ الكلمة والمفهوم النحوي</h3>${tbl('الكلمة / المفهوم','الشرح والتفصيل',P(e[0]))}<h3>٢ الكلمة ومضادها</h3>${tbl('الكلمة','المضاد',P(e[1]))}<h3>٣ الجمع والمفرد</h3>${tbl('المفرد','الجمع / النوع',P(e[2]))}`}
+if(p==2){const r=P(e[4]);h+=`<h3>الجملة الإعرابية التطبيقية</h3><div class="sent">${r[0][0]}</div><p>أعرب الجملة تفصيلياً ثم تحقق من إجابتك بالضغط على الجدول في وضع التدريب.</p><h3>الإعراب التفصيلي الكامل</h3>${tbl('الكلمة / التركيب','الموقع والإعراب التفصيلي',r.slice(1))}`}
+return h+`</section>`}
+
+function render(){seen.add(cur);
+document.querySelectorAll('#nav button').forEach((b,i)=>{b.setAttribute('aria-current',i==cur);b.classList.toggle('seen',seen.has(i))});
+$('#tabs').style.display=all?'none':'flex';
+document.querySelectorAll('#tabs button').forEach((b,i)=>b.setAttribute('aria-current',i==pg));
+$('#m1').setAttribute('aria-pressed',!all);$('#all').setAttribute('aria-pressed',all);
+$('#pbar').style.width=seen.size/8*100+'%';
+$('#book').innerHTML=all?V.map((_,i)=>[0,1,2].map(p=>page(i,p)).join('')).join(''):page(cur,pg);
+bind();
+document.querySelectorAll('td+td').forEach(td=>td.onclick=()=>td.classList.toggle('on'))}
+
+$('#m1').onclick=()=>{all=false;render()};$('#all').onclick=()=>{all=true;render()};
+$('#drill').onclick=e=>{const on=document.body.classList.toggle('drill');e.target.setAttribute('aria-pressed',on)};
+
+addEventListener('keydown',e=>{if(all)return;if(e.key=='ArrowLeft'&&cur<7){cur++;pg=0;render()}if(e.key=='ArrowRight'&&cur>0){cur--;pg=0;render()}});
+render();
+</script>
+<style>
+/* ===================== وضع الكتاب ===================== */
+.seg #bkb{border-inline-start:1px solid var(--latte)}
+body.bkopen{overflow:hidden}
+body.bkopen .cube{animation-play-state:paused}
+
+.bkov{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;height:100vh;height:100dvh;overflow:hidden;line-height:1.5;color:var(--ink);background-color:var(--bg);background-image:radial-gradient(circle at 18% 0,rgba(201,169,126,.28),transparent 46%),radial-gradient(circle at 92% 100%,rgba(125,155,173,.2),transparent 46%);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);animation:bkin .35s ease both}
+.bkov[hidden]{display:none!important}
+.bkov.out{animation:bkout .23s ease both}
+@keyframes bkin{from{opacity:0;transform:scale(.985)}}
+@keyframes bkout{to{opacity:0;transform:scale(.985)}}
+
+.bkbar{flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px 4px}
+.bkt{min-width:0;font:700 21px Amiri;color:var(--sage);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bkacts{display:flex;align-items:center;gap:8px;flex:none}
+.bkb{font:600 15px 'Noto Naskh Arabic';line-height:1.4;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:38px;padding:2px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);cursor:pointer}
+.bkb:disabled{opacity:.4;cursor:default}
+.bkb[aria-pressed=true]{background:var(--sage);border-color:var(--sage);color:#fff}
+.bkb svg,.bkarr svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.bkfoot{flex:none;display:flex;align-items:center;justify-content:center;gap:10px;padding:6px 14px 12px}
+.bkmid{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
+.bkinfo{min-width:140px;text-align:center;font-size:14px;color:var(--soft)}
+.bksel{font:600 15px 'Noto Naskh Arabic';min-height:38px;padding:2px 8px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
+
+.bkstage{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;touch-action:pan-y}
+.bkarr{position:absolute;top:50%;z-index:5;width:46px;height:46px;margin-top:-23px;display:grid;place-items:center;border-radius:50%;border:1.5px solid var(--latte);background:linear-gradient(145deg,var(--paper),var(--bg));color:var(--sage);box-shadow:0 4px 10px var(--shadow);cursor:pointer;transition:transform .2s}
+.bkarr svg{width:24px;height:24px}
+.bkarr:hover:not(:disabled){transform:scale(1.08)}
+.bkarr:disabled{opacity:.3;cursor:default}
+.bkprev{right:12px}.bknext{left:12px}
+@media (max-width:899px){.bkarr{display:none}.bkt{font-size:17px}}
+
+.bk{position:relative;height:var(--ph);width:calc(var(--pw)*2);perspective:calc(var(--pw)*5);transition:transform .9s cubic-bezier(.45,.05,.55,.95)}
+.bk.one{width:var(--pw)}
+.stk{position:absolute;top:4px;height:var(--ph);border-radius:8px;background:repeating-linear-gradient(90deg,var(--line) 0 1px,var(--paper) 1px 3px);box-shadow:0 18px 38px var(--shadow);transition:left .9s,width .9s}
+.stk.l{left:calc(0px - var(--tl,0px));width:calc(var(--pw) + var(--tl,0px))}
+.stk.r{left:var(--pw);width:calc(var(--pw) + var(--tr,0px))}
+.bk.one .stk.l{left:calc(0px - var(--tl,0px))}
+
+.lf{position:absolute;top:0;left:0;width:var(--pw);height:var(--ph);transform-origin:right center;transform-style:preserve-3d;transition:transform var(--ft,.9s) cubic-bezier(.45,.05,.55,.95) var(--dl,0s)}
+.lf.fl{transform:rotateY(180deg)}
+.lf.fly{animation:lfs var(--ft,.9s) var(--dl,0s) ease-in-out both}
+@keyframes lfs{0%,100%{box-shadow:0 0 0 rgba(40,25,10,0)}50%{box-shadow:0 0 46px 4px rgba(40,25,10,.42)}}
+.bk.one .lf.fl{visibility:hidden;transition:transform var(--ft,.9s) cubic-bezier(.45,.05,.55,.95) var(--dl,0s),visibility 0s linear calc(var(--dl,0s) + var(--ft,.9s))}
+
+.fc{position:absolute;inset:0;overflow:hidden;background:var(--paper);backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:visibility 0s linear calc(var(--dl,0s) + var(--ft,.9s)/2)}
+.fc.fr{border-radius:14px 0 0 14px}
+.fc.bc{border-radius:0 14px 14px 0;transform:rotateY(180deg);visibility:hidden}
+.lf.fl>.fr{visibility:hidden}
+.lf.fl>.bc{visibility:inherit}
+.fc:before,.fc:after{content:'';position:absolute;inset:0;pointer-events:none}
+.fc:before{z-index:3}
+.fr:before{background:linear-gradient(to left,rgba(70,45,20,.22),rgba(70,45,20,.07) 7%,transparent 16%)}
+.bc:before{background:linear-gradient(to right,rgba(70,45,20,.22),rgba(70,45,20,.07) 7%,transparent 16%)}
+.fc:after{z-index:4;opacity:0;background:linear-gradient(to left,rgba(40,25,10,0),rgba(40,25,10,.5))}
+.lf.fly .fc:after{animation:shd var(--ft,.9s) var(--dl,0s) ease-in-out both}
+@keyframes shd{50%{opacity:1}100%{opacity:0}}
+.fc.bp{background:var(--paper)}
+
+.pb{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding:22px 22px 50px 34px;scrollbar-width:thin;scrollbar-color:var(--latte) transparent}
+.bc .pb{padding:22px 34px 50px 22px}
+.pb:focus-visible{outline:2px solid var(--sky);outline-offset:-4px}
+.fd{position:absolute;left:0;right:0;bottom:0;height:46px;z-index:2;pointer-events:none;background:linear-gradient(to bottom,transparent,var(--paper) 72%)}
+.fo{position:absolute;left:0;right:0;bottom:9px;z-index:2;text-align:center;font:600 13px/1 Amiri;color:var(--soft);pointer-events:none}
+.hn{position:absolute;left:50%;bottom:26px;z-index:2;width:18px;height:18px;margin-left:-9px;color:var(--latte);opacity:0;pointer-events:none;transition:opacity .3s;animation:bob 1.6s ease-in-out infinite}
+.hn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.fc.more .hn{opacity:.95}
+@keyframes bob{50%{transform:translateY(4px)}}
+.bk .page{animation:none;margin:0;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent}
+.bk .ayah{font-size:clamp(20px,calc(var(--pw)*.062),29px)}
+.bk .sent{font-size:clamp(19px,calc(var(--pw)*.056),26px)}
+.bk td,.bk th{white-space:normal}
+.bk td:first-child,.bk td.w{white-space:normal;min-width:4.5em}
+
+.fc.cv{color:#2b2118;background:radial-gradient(circle at 28% 12%,rgba(255,255,255,.3),transparent 46%),linear-gradient(150deg,#d6b88e,#c9a97e 48%,#b58f63)}
+.cvf{position:absolute;inset:clamp(14px,calc(var(--pw)*.05),24px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(6px,calc(var(--ph)*.016),14px);padding:18px;text-align:center;border:1.5px solid rgba(251,246,236,.82);outline:1px solid rgba(251,246,236,.45);outline-offset:5px;border-radius:6px}
+.orn{width:clamp(56px,calc(var(--pw)*.22),96px);height:auto;fill:none;stroke:#fbf6ec;stroke-width:1.6;opacity:.92}
+.orn .fill{fill:#fbf6ec;stroke:none}
+.ct{font:700 clamp(26px,calc(var(--pw)*.095),46px)/1.5 Amiri;color:#2b2118}
+.cl{width:42%;height:1.5px;background:rgba(251,246,236,.85)}
+.cs{font:600 clamp(13px,calc(var(--pw)*.034),16px)/1.9 'Noto Naskh Arabic';color:#3b2f24}
+.cs.c1{font:700 clamp(18px,calc(var(--pw)*.058),27px)/1.7 Amiri}
+.bl .frm{position:absolute;inset:18px;border:1px solid var(--line);border-radius:6px}
+.bl .orn{position:absolute;left:50%;top:50%;width:64px;margin:-32px 0 0 -32px;stroke:var(--latte);opacity:.45;stroke-width:1.4}
+.bl .orn .fill{fill:var(--latte)}
+</style>
+<script>
+(()=>{
+'use strict';
+const NP=24,DUR=.9,MAXA=7;
+const q=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const CH={
+ l:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+ r:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
+ d:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'};
+const ORN='<svg class="orn" viewBox="0 0 100 100" aria-hidden="true"><rect x="24" y="24" width="52" height="52"/><rect x="24" y="24" width="52" height="52" transform="rotate(45 50 50)"/><circle cx="50" cy="50" r="15"/><circle cx="50" cy="50" r="4.5" class="fill"/></svg>';
+const REDUCE=matchMedia('(prefers-reduced-motion:reduce)');
+
+const ov=document.createElement('div');
+ov.className='bkov';ov.hidden=true;
+ov.setAttribute('role','dialog');ov.setAttribute('aria-modal','true');ov.setAttribute('aria-label','وضع الكتاب');
+ov.innerHTML=
+'<div class="bkbar"><div class="bkt" id="bkt"></div><div class="bkacts">'+
+ '<button class="bkb" id="bkdrill" aria-pressed="false">وضع التدريب</button>'+
+ '<button class="bkb" id="bkclose">إغلاق</button></div></div>'+
+'<div class="bkstage" id="bkstage">'+
+ '<button class="bkarr bkprev" id="bkprev" aria-label="الصفحة السابقة">'+CH.r+'</button>'+
+ '<div class="bk" id="bk"></div>'+
+ '<button class="bkarr bknext" id="bknext" aria-label="الصفحة التالية">'+CH.l+'</button></div>'+
+'<div class="bkfoot"><button class="bkb" id="bkp">'+CH.r+'<span>السابق</span></button>'+
+ '<div class="bkmid"><select class="bksel" id="bksel" aria-label="الانتقال إلى بند"></select><span class="bkinfo" id="bkinfo" aria-live="polite"></span></div>'+
+ '<button class="bkb" id="bkn"><span>التالي</span>'+CH.l+'</button></div>';
+document.body.appendChild(ov);
+const $o=s=>ov.querySelector(s);
+const bk=$o('#bk'),stage=$o('#bkstage'),sel=$o('#bksel'),info=$o('#bkinfo');
+const prevBs=[$o('#bkprev'),$o('#bkp')],nextBs=[$o('#bknext'),$o('#bkn')];
+sel.innerHTML='<option value="c">الغلاف</option>'+V.map((_,i)=>`<option value="${i}">بند ${ar(i+1)}</option>`).join('');
+
+let spread=true,built=null,N=14,maxPos=14,pos=0,pw=0,ph=0,leaves=[];
+let busy=0,tm=0,rt=0,lastFocus=null,closing=false;
+const bgEls=()=>[...document.body.children].filter(e=>e!==ov);
+
+function coverHTML(){
+ const t=q('h1').textContent.trim();
+ const subs=[...document.querySelectorAll('header .sub')].map(e=>e.textContent.trim());
+ return `<div class="cvf">${ORN}<div class="ct">${esc(t)}</div><div class="cl"></div>${subs.map((s,i)=>`<div class="cs${i?'':' c1'}">${esc(s)}</div>`).join('')}</div>`;
+}
+const backHTML=()=>`<div class="cvf">${ORN}</div>`;
+const blankHTML=()=>`<div class="frm"></div>${ORN}`;
+function pageFace(pi){
+ return `<div class="pb" tabindex="0">${page(Math.floor(pi/3),pi%3)}</div><div class="fd"></div><div class="hn">${CH.d}</div><div class="fo">${ar(pi+1)}</div>`;
+}
+function spec(face){
+ if(face===0)return['cv',coverHTML()];
+ if(face===1||face===26)return['bl',blankHTML()];
+ if(face===27)return['cv',backHTML()];
+ return['pgf',pageFace(face-2)];
+}
+function build(key){
+ built=key;spread=key==='sp';
+ N=spread?14:26;maxPos=spread?N:N-1;pos=0;
+ bk.className='bk '+key;
+ let h='<div class="stk l"></div>'+(spread?'<div class="stk r"></div>':'');
+ for(let k=0;k<N;k++){
+  let a,b;
+  if(spread){a=spec(2*k);b=spec(2*k+1)}
+  else{a=k===0?['cv',coverHTML()]:k===N-1?['cv',backHTML()]:['pgf',pageFace(k-1)];b=['bp','']}
+  h+=`<div class="lf" style="z-index:${N-k+1}"><div class="fc fr ${a[0]}">${a[1]}</div><div class="fc bc ${b[0]}">${b[1]}</div></div>`;
+ }
+ bk.innerHTML=h;
+ leaves=[...bk.querySelectorAll('.lf')];
+ bindContent();
+}
+function bindContent(){
+ bind();
+ bk.querySelectorAll('td+td').forEach(td=>td.onclick=()=>td.classList.toggle('on'));
+ bk.querySelectorAll('.pb').forEach(pb=>pb.addEventListener('scroll',()=>more(pb),{passive:true}));
+}
+function more(pb){pb.parentElement.classList.toggle('more',pb.scrollHeight-pb.scrollTop-pb.clientHeight>8)}
+function updateMore(){bk.querySelectorAll('.pb').forEach(more)}
+
+function measure(){
+ const r=stage.getBoundingClientRect();
+ const side=r.width>=900?66:8;
+ const aw=Math.max(240,r.width-2*side),ah=Math.max(260,r.height-14);
+ spread=aw>=820&&ah>=420;
+ let w,h=ah;
+ if(spread){w=aw/2;if(w/h>.8)w=h*.8;else if(w/h<.62)h=w/.62}
+ else w=Math.min(aw,Math.max(h*.8,Math.min(aw,520)));
+ pw=Math.floor(w);ph=Math.floor(h);
+}
+function layout(force,pi0){
+ measure();
+ bk.style.setProperty('--pw',pw+'px');bk.style.setProperty('--ph',ph+'px');
+ const key=spread?'sp':'one';
+ if(force||key!==built){
+  const pi=pi0!==undefined?pi0:piOf();
+  build(key);
+  go(posOf(pi),false);
+ }else settle();
+}
+
+function piOf(){
+ if(pos<=0)return -1;
+ if(spread){const r=2*pos-3;return r>=0?Math.min(r,NP-1):0}
+ return Math.min(pos-1,NP-1);
+}
+function posOf(pi){
+ if(pi<0)return 0;
+ return spread?(pi%2===0?pi/2+1:(pi+3)/2):pi+1;
+}
+const zRest=k=>k<pos?k+1:N-k+1;
+function win(p,set){for(let k=p-2;k<=p+2;k++)if(k>=0&&k<N)set.add(k);return set}
+
+function go(np,animate){
+ np=Math.max(0,Math.min(maxPos,np));
+ const old=pos;
+ if(np!==old){
+  pos=np;
+  const fwd=np>old,lo=Math.min(old,np),hi=Math.max(old,np),ks=[];
+  for(let k=lo;k<hi;k++)ks.push(k);
+  if(!fwd)ks.reverse();
+  const m=ks.length;
+  const A=(animate&&!REDUCE.matches)?Math.min(m,MAXA):0;
+  const stag=A>1?Math.min(130,950/(A-1)):0;
+  const want=new Set();win(old,want);win(np,want);
+  ks.forEach((k,i)=>{if(i>=m-A)want.add(k)});
+  leaves.forEach((l,k)=>{l.style.display=want.has(k)?'':'none'});
+  void bk.offsetWidth;
+  ks.forEach((k,i)=>{
+   const l=leaves[k],j=i-(m-A),an=j>=0;
+   l.style.setProperty('--ft',an?DUR+'s':'0s');
+   l.style.setProperty('--dl',an?(j*stag/1000).toFixed(3)+'s':'0s');
+   l.style.zIndex=an?200+(fwd?k:N-k):zRest(k);
+   l.classList.toggle('fl',k<np);
+   if(an){l.classList.remove('fly');void l.offsetWidth;l.classList.add('fly')}
+  });
+  if(A)busy=Math.max(busy,performance.now()+(DUR+(A-1)*stag/1000)*1000+80);
+ }
+ settle();
+ clearTimeout(tm);
+ tm=setTimeout(cleanup,Math.max(0,busy-performance.now())+30);
+}
+function cleanup(){
+ if(performance.now()<busy-20){tm=setTimeout(cleanup,busy-performance.now()+30);return}
+ leaves.forEach((l,k)=>{l.style.zIndex=zRest(k);l.classList.remove('fly')});
+ const want=win(pos,new Set());
+ leaves.forEach((l,k)=>{l.style.display=want.has(k)?'':'none'});
+ updateMore();
+}
+function settle(){
+ let sx=0;
+ if(spread){if(pos===0)sx=pw/2;else if(pos===N)sx=-pw/2}
+ bk.style.transform=sx?`translateX(${sx}px)`:'';
+ bk.style.setProperty('--tl',((spread?(N-pos)/N:(maxPos-pos)/maxPos)*(spread?13:8)).toFixed(1)+'px');
+ bk.style.setProperty('--tr',(spread?pos/N*13:0).toFixed(1)+'px');
+ prevBs.forEach(b=>b.disabled=pos<=0);
+ nextBs.forEach(b=>b.disabled=pos>=maxPos);
+ const pi=piOf();
+ if(pi>=0){cur=Math.floor(pi/3);pg=pi%3;seen.add(cur)}
+ sel.value=pos===0?'c':String(cur);
+ let t;
+ if(pos===0)t='الغلاف';
+ else if(pos>=N&&spread||!spread&&pos===maxPos)t='نهاية الكتاب';
+ else if(spread){
+  const nr=2*pos-2,nl=2*pos-1,ok=[nr,nl].filter(n=>n>=1&&n<=NP);
+  t=ok.length===2?`الصفحتان ${ar(ok[0])} – ${ar(ok[1])} من ${ar(NP)}`:`الصفحة ${ar(ok[0])} من ${ar(NP)}`;
+ }else t=`الصفحة ${ar(pos)} من ${ar(NP)}`;
+ info.textContent=t;
+ const vis=new Set();
+ if(spread){
+  if(leaves[pos-1])vis.add(leaves[pos-1].querySelector('.bc'));
+  if(leaves[pos])vis.add(leaves[pos].querySelector('.fr'));
+ }else if(leaves[pos])vis.add(leaves[pos].querySelector('.fr'));
+ bk.querySelectorAll('.fc').forEach(f=>{f.inert=!vis.has(f)});
+}
+const next=()=>go(pos+1,true),prev=()=>go(pos-1,true);
+
+function openBook(){
+ if(!ov.hidden||closing)return;
+ lastFocus=document.activeElement;
+ ov.hidden=false;ov.classList.remove('out');
+ document.body.classList.add('bkopen');
+ bgEls().forEach(e=>e.inert=true);
+ $o('#bkt').textContent=q('h1').textContent.trim();
+ $o('#bkdrill').setAttribute('aria-pressed',document.body.classList.contains('drill'));
+ layout(true,(cur===0&&pg===0)?-1:cur*3+pg);
+ $o('#bkclose').focus();
+}
+function closeBook(){
+ if(ov.hidden||closing)return;
+ closing=true;ov.classList.add('out');
+ setTimeout(()=>{
+  ov.hidden=true;ov.classList.remove('out');
+  document.body.classList.remove('bkopen');
+  bgEls().forEach(e=>e.inert=false);
+  closing=false;
+  render();
+  try{lastFocus&&lastFocus.focus()}catch(_){}
+ },230);
+}
+
+q('#bkb').onclick=openBook;
+$o('#bkclose').onclick=closeBook;
+prevBs.forEach(b=>b.onclick=prev);
+nextBs.forEach(b=>b.onclick=next);
+sel.onchange=()=>go(sel.value==='c'?0:posOf(+sel.value*3),true);
+$o('#bkdrill').onclick=e=>{q('#drill').click();e.currentTarget.setAttribute('aria-pressed',document.body.classList.contains('drill'))};
+
+addEventListener('keydown',e=>{
+ if(ov.hidden)return;
+ if(e.key==='Escape'){e.preventDefault();e.stopImmediatePropagation();closeBook();return}
+ if(e.altKey||e.ctrlKey||e.metaKey)return;
+ const k=e.key;
+ if(k==='ArrowLeft'||k==='ArrowRight'){
+  e.stopImmediatePropagation();
+  if(e.target&&e.target.tagName==='SELECT')return;
+  e.preventDefault();
+  k==='ArrowLeft'?next():prev();
+ }else if((k==='Home'||k==='End')&&!(e.target&&e.target.closest&&e.target.closest('.pb'))){
+  e.preventDefault();go(k==='Home'?0:maxPos,true);
+ }
+},true);
+
+let tx=null;
+stage.addEventListener('touchstart',e=>{tx=e.touches.length===1?{x:e.touches[0].clientX,y:e.touches[0].clientY}:null},{passive:true});
+stage.addEventListener('touchend',e=>{
+ if(!tx)return;
+ const t=e.changedTouches[0],dx=t.clientX-tx.x,dy=t.clientY-tx.y;tx=null;
+ if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.6)dx>0?next():prev();
+},{passive:true});
+
+const onResize=()=>{if(ov.hidden)return;clearTimeout(rt);rt=setTimeout(()=>layout(false),120)};
+addEventListener('resize',onResize);addEventListener('orientationchange',onResize);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{if(!ov.hidden)updateMore()});
+})();
+</script>
+</body>
+</html>
